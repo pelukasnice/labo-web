@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Doctor from "@/components/Doctor";
 import Steps from "@/components/Steps";
@@ -12,9 +13,10 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
+      <AboutUs />
+
       <Doctor />
-      <Steps />
+
       <Testimonials />
       <FinalCTA />
       <Footer />

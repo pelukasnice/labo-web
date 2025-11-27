@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -409,11 +410,19 @@ export default function Services() {
             </div>
           </div>
           <div className="mt-8 bg-primary/10 rounded-2xl p-6 border border-primary/20">
-            <p className="text-gray-700 text-center">
+            <p className="text-gray-700 text-center mb-6">
               <strong className="text-primary">Recuerda:</strong> El PAP es un
               estudio preventivo fundamental. Realizarlo regularmente puede
               salvar tu vida al detectar problemas de forma temprana.
             </p>
+            <div className="text-center">
+              <Link
+                href="/pap"
+                className="inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-200 shadow-medical hover:shadow-lg"
+              >
+                Ver información completa sobre el PAP →
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>
