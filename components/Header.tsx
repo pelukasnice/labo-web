@@ -29,9 +29,9 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
-        ? "backdrop-blur-xl bg-white/40 border-b border-white/30 shadow-xl shadow-black/10"
-        : "bg-transparent"
+      className={`sticky top-0 left-0 right-0 z-[100] transition-all duration-300 border-b ${isScrolled
+        ? "backdrop-blur-xl bg-white/40 border-white/30 shadow-xl shadow-black/10"
+        : "bg-transparent border-transparent"
         }`}
     >
       <nav
