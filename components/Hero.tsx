@@ -18,9 +18,9 @@ export default function Hero() {
           quality={90}
         />
         {/* Overlay para mejorar legibilidad del texto */}
-        <div className="absolute inset-0 bg-white/60"></div>
+        <div className="absolute inset-0 bg-white/30"></div>
       </div>
-      
+
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5 z-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>

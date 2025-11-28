@@ -17,8 +17,48 @@ export default function AboutUs() {
                         Sobre Nosotros
                     </h2>
 
-                    <div className="grid md:grid-cols-2 gap-12 mb-12 items-center">
-                        <div className="space-y-6 text-lg text-gray-700">
+                    <div className="grid md:grid-cols-2 gap-12 mb-12 items-start">
+                        {/* Left Column: Video and Points */}
+                        <div className="space-y-12">
+                            {/* Video */}
+                            <div className="rounded-2xl overflow-hidden max-w-md">
+                                <video
+                                    src="/assets/video_labo.mp4"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-auto"
+                                    poster="/assets/foto_pap.webp"
+                                >
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
+
+                            {/* Points */}
+                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                                <h3 className="text-xl font-bold text-primary mb-6">
+                                    Por qué elegirnos
+                                </h3>
+                                <ul className="space-y-4">
+                                    {[
+                                        "Entrega rápida de resultados sin comprometer la calidad del diagnóstico.",
+                                        "Envío digital de informes, accesibles desde cualquier dispositivo.",
+                                        "Validación electrónica con código QR, que garantiza autenticidad y seguridad.",
+                                        "Profesionalismo y rigurosidad, respaldados por años de experiencia en citología ginecológica.",
+                                        "Atención personalizada, con informes detallados y orientados al contexto clínico de cada paciente."
+                                    ].map((item, index) => (
+                                        <li key={index} className="flex items-start gap-3">
+                                            <span className="mt-2 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                                            <span className="text-gray-700">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Right Column: Text (offset downwards) */}
+                        <div className="space-y-6 text-lg text-gray-700 md:mt-20">
                             <p>
                                 En <strong>Laboratorio de Citología Ginecológica Dra. Martínez</strong> trabajamos con un objetivo claro: ofrecer diagnósticos precisos, rápidos y confiables para cada una de nuestras pacientes y profesionales derivantes.
                             </p>
@@ -28,26 +68,6 @@ export default function AboutUs() {
                             <p>
                                 Nos especializamos en estudios citológicos y anatomopatológicos orientados a la salud ginecológica, brindando un servicio moderno, ágil y centrado en la persona. Cada informe es analizado cuidadosamente para asegurar un diagnóstico personalizado, fundamentado y clínicamente útil.
                             </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                            <h3 className="text-xl font-bold text-primary mb-6">
-                                Por qué elegirnos
-                            </h3>
-                            <ul className="space-y-4">
-                                {[
-                                    "Entrega rápida de resultados sin comprometer la calidad del diagnóstico.",
-                                    "Envío digital de informes, accesibles desde cualquier dispositivo.",
-                                    "Validación electrónica con código QR, que garantiza autenticidad y seguridad.",
-                                    "Profesionalismo y rigurosidad, respaldados por años de experiencia en citología ginecológica.",
-                                    "Atención personalizada, con informes detallados y orientados al contexto clínico de cada paciente."
-                                ].map((item, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <span className="mt-2 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                                        <span className="text-gray-700">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
                         </div>
                     </div>
 
