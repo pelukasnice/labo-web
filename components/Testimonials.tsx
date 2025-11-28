@@ -41,7 +41,7 @@ export default function Testimonials() {
     const interval = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Cambia cada 5 segundos
+    }, 3000); // Cambia cada 3 segundos
 
     return () => clearInterval(interval);
   }, []);
@@ -112,8 +112,8 @@ export default function Testimonials() {
                 animate="center"
                 exit="exit"
                 transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
+                  x: { type: "tween", duration: 0.8, ease: "easeInOut" },
+                  opacity: { duration: 0.8 },
                 }}
                 className="absolute inset-0 flex items-center justify-center"
               >
@@ -194,11 +194,10 @@ export default function Testimonials() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
+                className={`transition-all duration-300 rounded-full ${index === currentIndex
                     ? "bg-primary w-8 h-3"
                     : "bg-gray-300 w-3 h-3 hover:bg-gray-400"
-                }`}
+                  }`}
                 aria-label={`Ir al testimonio ${index + 1}`}
               />
             ))}

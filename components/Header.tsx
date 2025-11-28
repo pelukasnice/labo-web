@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,20 +45,38 @@ export default function Header() {
               className={`transition-all duration-300 flex items-center ${isScrolled ? "w-auto h-[35px]" : "w-[150px] h-[100px]"
                 }`}
             >
-              {isScrolled ? (
-                <span className="text-xl font-bold text-primary whitespace-nowrap">
-                  Dra. Maria del carmen Nomi
-                </span>
-              ) : (
-                <Image
-                  src="/assets/logo-chico.png"
-                  alt="Citología Ginecológica - Dra. Maria del Carmen Norni"
-                  width={150}
-                  height={150}
-                  className="w-full h-full object-contain transition-all duration-300"
-                  priority
-                />
-              )}
+              <AnimatePresence mode="wait">
+                {isScrolled ? (
+                  <motion.span
+                    key="text"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-xl font-bold text-primary whitespace-nowrap"
+                  >
+                    Dra. Maria del carmen Nomi
+                  </motion.span>
+                ) : (
+                  <motion.div
+                    key="logo"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="w-full h-full"
+                  >
+                    <Image
+                      src="/assets/logo-chico.png"
+                      alt="Citología Ginecológica - Dra. Maria del Carmen Norni"
+                      width={150}
+                      height={150}
+                      className="w-full h-full object-contain"
+                      priority
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </Link>
 
