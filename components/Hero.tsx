@@ -36,9 +36,11 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Laboratorio de{" "}
-              <span className="text-primary">Citología Ginecológica</span>
+              <span className="bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent">
+                Citología Ginecológica
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
               Estudios citológicos confiables, precisos y con entrega rápida.
