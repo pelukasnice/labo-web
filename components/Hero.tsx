@@ -6,16 +6,15 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center -mt-[120px] pt-[120px]">
+    <section className="relative min-h-screen flex items-center">
       {/* Background Image - se extiende hacia arriba para cubrir el navbar */}
       <div className="absolute inset-0 z-0 top-[-120px] h-[calc(100%+120px)]">
         <Image
-          src="/assets/foto_pap.webp"
-          alt="Fondo"
+          src="/assets/fondo_hero.png"
+          alt="Fondo laboratorio"
           fill
-          className="object-cover"
+          className="object-cover object-[50%_20%]"
           priority
-          quality={90}
         />
         {/* Overlay para mejorar legibilidad del texto */}
         <div className="absolute inset-0 bg-white/30"></div>
@@ -27,7 +26,7 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-light rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 pt-[120px] pb-20 relative z-10">
         <div className="max-w-3xl">
           {/* Text Content */}
           <motion.div
