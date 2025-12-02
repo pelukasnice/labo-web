@@ -55,7 +55,7 @@ export default function Hero() {
                 href="/pap"
                 className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-200 shadow-medical hover:shadow-lg text-center"
               >
-                Info Pap
+                Info PAP
               </Link>
               <Link
                 href="/resultados"

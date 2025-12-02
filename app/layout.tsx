@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="overflow-x-hidden">
-      <body className="overflow-x-hidden">{children}</body>
+    <html lang="es">
+      <body className="bg-gradient-to-br from-pink-50 to-pink-100 min-h-screen">{children}</body>
     </html>
   );
 }

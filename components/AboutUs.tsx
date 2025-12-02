@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-        <section id="sobre-nosotros" className="py-20 bg-white">
+        <section id="sobre-nosotros" className="py-20 overflow-hidden">
             <div className="container mx-auto px-4">
 
                 {/* 1. SECCIÓN INTRODUCCIÓN */}
@@ -132,7 +132,7 @@ export default function AboutUs() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-medical transition-all duration-300 border border-gray-100 group"
+                                className="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-white/30 group transition-all duration-300 hover:bg-white/30"
                             >
                                 <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                     {item.icon}
