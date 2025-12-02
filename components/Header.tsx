@@ -21,9 +21,8 @@ export default function Header() {
 
   const navLinks = [
     { href: "/", label: "Inicio" },
-    { href: "#servicios", label: "Servicios" },
-    { href: "#dra-martinez", label: "La Dra. Martínez" },
-    { href: "/turnos", label: "Turnos" },
+    { href: "#servicios", label: "Sobre Nosotros" },
+    { href: "#dra-nomi", label: "La Dra. Nomi" },
     { href: "#contacto", label: "Contacto" },
   ];
 
@@ -70,11 +69,11 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/turnos"
+              href="/pap"
               className={`bg-primary text-white rounded-full font-semibold hover:bg-primary-dark transition-all duration-200 shadow-medical hover:shadow-lg ${isScrolled ? "px-4 py-1.5 text-sm" : "px-6 py-2"
                 }`}
             >
-              Sacar turno
+              Info Pap
             </Link>
           </div>
 

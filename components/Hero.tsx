@@ -52,10 +52,10 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
-                href="/turnos"
+                href="/pap"
                 className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-200 shadow-medical hover:shadow-lg text-center"
               >
-                Sacar turno
+                Info Pap
               </Link>
               <Link
                 href="/resultados"
