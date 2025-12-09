@@ -81,7 +81,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-medical-soft to-white">
+    <section className="py-20 backdrop-blur-xl bg-white/40">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -117,7 +117,7 @@ export default function Testimonials() {
                 }}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="bg-white rounded-2xl p-8 md:p-10 shadow-soft border border-gray-100 w-full max-w-3xl mx-4">
+                <div className="backdrop-blur-xl bg-white/40 border border-white/30 shadow-xl shadow-black/10 rounded-2xl p-8 md:p-10 w-full max-w-3xl mx-4">
                   {/* Rating */}
                   <div className="flex gap-1 mb-6 justify-center">
                     {[...Array(testimonials[currentIndex].rating)].map(
@@ -195,8 +195,8 @@ export default function Testimonials() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`transition-all duration-300 rounded-full ${index === currentIndex
-                    ? "bg-primary w-8 h-3"
-                    : "bg-gray-300 w-3 h-3 hover:bg-gray-400"
+                  ? "bg-primary w-8 h-3"
+                  : "bg-gray-300 w-3 h-3 hover:bg-gray-400"
                   }`}
                 aria-label={`Ir al testimonio ${index + 1}`}
               />

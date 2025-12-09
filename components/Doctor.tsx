@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Doctor() {
   return (
-    <section id="dra-martinez" className="py-20 bg-gradient-to-br from-medical-soft to-white">
+    <section id="dra-martinez" className="py-20 backdrop-blur-xl bg-white/40">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
@@ -16,7 +16,7 @@ export default function Doctor() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative bg-white rounded-3xl shadow-medical p-4">
+            <div className="relative backdrop-blur-xl bg-white/40 border border-white/30 shadow-xl shadow-black/10 rounded-3xl p-4">
               <div className="aspect-[3/4] bg-gradient-to-br from-primary-teal-300 via-primary-light to-primary rounded-2xl flex items-center justify-center overflow-hidden relative">
                 {/* Foto de la doctora */}
                 <Image
