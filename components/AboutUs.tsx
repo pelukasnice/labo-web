@@ -69,34 +69,28 @@ export default function AboutUs() {
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-sm md:max-w-none mx-auto">
                         {[
                             {
                                 title: "Rapidez y Precisión",
                                 desc: "Entrega de resultados optimizada sin comprometer la rigurosidad diagnóstica.",
-                                icon: (
-                                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                )
+                                icon: null,
+                                hasBackgroundImage: true,
+                                backgroundImageSrc: "/assets/relog_SF.png"
                             },
                             {
                                 title: "Tecnología Digital",
                                 desc: "Informes digitales accesibles desde cualquier dispositivo, en cualquier momento.",
-                                icon: (
-                                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                    </svg>
-                                )
+                                icon: null,
+                                hasBackgroundImage: true,
+                                backgroundImageSrc: "/assets/informe_SF.png"
                             },
                             {
                                 title: "Seguridad QR",
                                 desc: "Validación electrónica única que garantiza la autenticidad de cada informe.",
-                                icon: (
-                                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4h2v-4zM6 6h2v2H6V6zm0 12h2v2H6v-2zm12-12h2v2h-2V6z" />
-                                    </svg>
-                                )
+                                icon: null,
+                                hasBackgroundImage: true,
+                                backgroundImageSrc: "/assets/QR_SF.png"
                             },
                             {
                                 title: "Atención Humana",
@@ -132,13 +126,26 @@ export default function AboutUs() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-white/30 group transition-all duration-300 hover:bg-white/30"
+                                className={`bg-white/20 backdrop-blur-lg p-6 md:p-8 rounded-2xl shadow-lg border border-white/30 group transition-all duration-500 hover:bg-white/30 hover:shadow-2xl hover:scale-105 flex flex-col items-center text-center h-full ${item.hasBackgroundImage ? 'relative overflow-hidden' : ''}`}
                             >
-                                <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                    {item.icon}
-                                </div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h4>
-                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                                {item.hasBackgroundImage && (
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-50 pointer-events-none transition-transform duration-500 group-hover:scale-110">
+                                        <Image
+                                            src={item.backgroundImageSrc || "/assets/relog_SF.png"}
+                                            alt={item.title}
+                                            width={288}
+                                            height={288}
+                                            className="w-72 h-72 object-contain"
+                                        />
+                                    </div>
+                                )}
+                                <h4 className="text-xl font-bold text-gray-900 mb-6 relative z-10">{item.title}</h4>
+                                {item.icon && (
+                                    <div className="flex items-center justify-center text-primary mb-6 transition-colors duration-300 relative z-10">
+                                        {item.icon}
+                                    </div>
+                                )}
+                                <p className="text-gray-600 leading-relaxed relative z-10">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>

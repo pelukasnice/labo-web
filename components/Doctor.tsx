@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Doctor() {
   return (
@@ -16,23 +17,15 @@ export default function Doctor() {
             className="relative"
           >
             <div className="relative bg-white rounded-3xl shadow-medical p-4">
-              <div className="aspect-[3/4] bg-gradient-to-br from-primary-teal-300 via-primary-light to-primary rounded-2xl flex items-center justify-center overflow-hidden">
-                {/* Placeholder for doctor photo */}
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary-light/20 flex items-center justify-center">
-                  <svg
-                    className="w-48 h-48 text-white opacity-60"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
+              <div className="aspect-[3/4] bg-gradient-to-br from-primary-teal-300 via-primary-light to-primary rounded-2xl flex items-center justify-center overflow-hidden relative">
+                {/* Foto de la doctora */}
+                <Image
+                  src="/assets/mami_IA_web.png"
+                  alt="Dra. Nomi - Especialista en citología ginecológica"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
               {/* Decorative badge */}
               <div className="absolute -bottom-4 -right-4 bg-primary text-white px-6 py-3 rounded-full shadow-medical">
@@ -50,7 +43,7 @@ export default function Doctor() {
             className="space-y-6"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              La Dra. Martínez
+              La Dra. Maria del C. Nomi
             </h2>
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
               <p>
