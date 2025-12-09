@@ -81,8 +81,29 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 backdrop-blur-xl bg-white/40">
-      <div className="container mx-auto px-4">
+    <section className="py-20 backdrop-blur-xl bg-white/40 relative overflow-hidden">
+      {/* Formas decorativas circulares - violeta hematoxilina */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Círculo grande superior izquierda - ROSA */}
+        <div className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 opacity-20 blur-3xl"></div>
+
+        {/* Círculo mediano superior derecha */}
+        <div className="absolute top-40 -right-32 w-80 h-80 rounded-full bg-gradient-to-br from-violet-500 to-purple-700 opacity-25 blur-2xl"></div>
+
+        {/* Círculo grande inferior derecha - ROSA */}
+        <div className="absolute -bottom-32 right-10 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-pink-500 to-rose-600 opacity-20 blur-3xl"></div>
+
+        {/* Círculo mediano inferior izquierda */}
+        <div className="absolute bottom-20 -left-16 w-72 h-72 rounded-full bg-gradient-to-br from-violet-400 to-purple-500 opacity-30 blur-2xl"></div>
+
+        {/* Círculo pequeño central superior - ROSA */}
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 opacity-15 blur-xl"></div>
+
+        {/* Círculo pequeño central inferior */}
+        <div className="absolute bottom-10 left-1/3 w-40 h-40 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 opacity-25 blur-xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
