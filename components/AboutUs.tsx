@@ -146,15 +146,33 @@ export default function AboutUs() {
                 </div>
 
                 {/* 3. SECCIÓN INNOVACIÓN DIGITAL */}
-                <div className="backdrop-blur-xl bg-white/40 border border-white/30 shadow-xl shadow-black/10 rounded-[3rem] p-8 md:p-16 overflow-hidden relative">
-                    <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-                        {/* Texto Digital */}
-                        <div className="order-2 md:order-1 space-y-8">
-                            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <div className="rounded-[3rem] overflow-hidden relative min-h-[600px] flex items-center">
+                    {/* Imagen de fondo */}
+                    <div className="absolute inset-0 z-0">
+                        <Image
+                            src="/assets/mujer_celu.png"
+                            alt="Resultados digitales siempre con vos"
+                            fill
+                            className="object-cover"
+                        />
+                        {/* Overlay oscuro para mejorar legibilidad */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent"></div>
+                    </div>
+
+                    {/* Card glassmorphism con texto */}
+                    <div className="container mx-auto px-8 md:px-16 relative z-10">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="max-w-xl backdrop-blur-xl bg-white/30 border border-white/40 shadow-2xl rounded-3xl p-8 md:p-12 space-y-8"
+                        >
+                            <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
                                 Tus resultados, <br />
-                                <span className="text-primary">siempre con vos</span>
+                                <span className="text-pink-300">siempre con vos</span>
                             </h3>
-                            <p className="text-lg text-gray-600 leading-relaxed">
+                            <p className="text-lg text-white/95 leading-relaxed drop-shadow">
                                 Olvídate de los papeles y las esperas. Accede a tus informes completos directamente desde tu celular, con la misma validez que el formato físico.
                             </p>
                             <ul className="space-y-4">
@@ -163,39 +181,18 @@ export default function AboutUs() {
                                     "Historial médico digitalizado",
                                     "Fácil de compartir con tu médico"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                                        <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm">✓</div>
+                                    <li key={i} className="flex items-center gap-3 text-white font-medium drop-shadow">
+                                        <div className="w-6 h-6 rounded-full bg-pink-400/80 flex items-center justify-center text-white text-sm flex-shrink-0">✓</div>
                                         {item}
                                     </li>
                                 ))}
                             </ul>
                             <div className="pt-4">
-                                <button className="bg-gray-900 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors shadow-lg">
+                                <button className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-pink-50 transition-colors shadow-lg">
                                     Ver cómo funciona
                                 </button>
                             </div>
-                        </div>
-
-                        {/* Imagen Celular */}
-                        <div className="order-1 md:order-2 flex justify-center">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5 }}
-                                className="relative"
-                            >
-                                {/* Glow effect behind phone */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/20 blur-3xl rounded-full"></div>
-
-                                <Image
-                                    src="/assets/celular.jpeg"
-                                    alt="Resultados digitales en tu celular"
-                                    width={400}
-                                    height={800}
-                                    className="relative w-72 md:w-80 h-auto object-contain [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent),linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] [mask-composite:intersect] [-webkit-mask-composite:source-in]"
-                                />
-                            </motion.div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 

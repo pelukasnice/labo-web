@@ -39,10 +39,10 @@ export default function Doctor() {
           >
             <div className="relative backdrop-blur-xl bg-white/40 border border-white/30 shadow-xl shadow-black/10 rounded-3xl p-4">
               <div className="aspect-[3/4] bg-gradient-to-br from-primary-teal-300 via-primary-light to-primary rounded-2xl flex items-center justify-center overflow-hidden relative">
-                {/* Foto de la doctora */}
+                {/* Imagen del microscopio */}
                 <Image
-                  src="/assets/mami_IA_web.png"
-                  alt="Dra. Nomi - Especialista en citología ginecológica"
+                  src="/assets/microscopio.png"
+                  alt="Microscopio - Tecnología de precisión para citología ginecológica"
                   fill
                   className="object-cover"
                   priority
