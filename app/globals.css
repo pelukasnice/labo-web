@@ -18,16 +18,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  /* Compensar el header sticky */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   font-family: 'Inter', 'Nunito', system-ui, sans-serif;
 }
 
@@ -36,4 +35,3 @@ body {
     text-wrap: balance;
   }
 }
-

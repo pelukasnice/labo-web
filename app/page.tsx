@@ -14,11 +14,9 @@ export default function Home() {
       <Header />
       <Hero />
       <AboutUs />
-
       <Doctor />
-
       <Testimonials />
-      <FinalCTA />
+
       <Footer />
     </main>
   );

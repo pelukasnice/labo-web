@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Doctor() {
   return (
-    <section id="dra-martinez" className="py-20 backdrop-blur-xl bg-white/40 relative overflow-hidden">
+    <section id="dra-nomi" className="py-20 backdrop-blur-xl bg-white/40 relative overflow-hidden">
       {/* Formas decorativas circulares - violeta hematoxilina */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Círculo grande superior izquierda - ROSA */}
@@ -28,7 +28,7 @@ export default function Doctor() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

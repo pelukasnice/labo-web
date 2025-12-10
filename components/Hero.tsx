@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section id="inicio" className="relative min-h-screen flex items-center">
       {/* Background Image - se extiende hacia arriba para cubrir el navbar */}
       <div className="absolute inset-0 z-0 top-[-120px] h-[calc(100%+120px)]">
         <Image

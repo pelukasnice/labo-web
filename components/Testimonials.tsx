@@ -18,17 +18,17 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Laura S.",
-    text: "La Dra. Martínez es muy profesional y empática. El laboratorio tiene tecnología moderna y los resultados son confiables. Totalmente recomendable.",
+    text: "La Dra. Nomi es muy profesional y empática. El laboratorio tiene tecnología moderna y los resultados son confiables. Totalmente recomendable.",
     rating: 5,
   },
   {
     name: "Ana M.",
-    text: "Proceso muy sencillo desde el turno hasta la entrega de resultados. Atención personalizada y ambiente muy acogedor. Muy satisfecha con el servicio.",
+    text: "Muy sencilla la entrega de resultados. Atención personalizada y ambiente muy acogedor. Muy satisfecha con el servicio.",
     rating: 5,
   },
   {
     name: "Carmen R.",
-    text: "Llevo años confiando en este laboratorio. La calidad del servicio y la atención de la Dra. Martínez son excepcionales. Siempre me siento bien cuidada.",
+    text: "Llevo años confiando en este laboratorio. La calidad del servicio y la atención de la Dra. Nomi son excepcionales. Siempre me siento bien cuidada.",
     rating: 5,
   },
 ];
@@ -83,14 +83,13 @@ export default function Testimonials() {
 
   return (
     <section className="py-20 backdrop-blur-xl bg-white/40 relative overflow-hidden">
-      {/* Logo de fondo para glassmorphism */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      {/* Imagen de fondo para glassmorphism */}
+      <div className="absolute inset-0 pointer-events-none">
         <Image
-          src="/assets/logo-chico.png"
-          alt="Logo de fondo"
-          width={1000}
-          height={1000}
-          className="w-[700px] md:w-[900px] h-auto object-contain opacity-40 blur-sm"
+          src="/assets/testimonial_background.png"
+          alt="Fondo de testimonios"
+          fill
+          className="object-cover opacity-40 blur-sm"
         />
       </div>
 

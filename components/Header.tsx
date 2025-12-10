@@ -20,8 +20,8 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Inicio" },
-    { href: "#servicios", label: "Sobre Nosotros" },
+    { href: "#inicio", label: "Inicio" },
+    { href: "#sobre-nosotros", label: "Sobre Nosotros" },
     { href: "#dra-nomi", label: "La Dra. Nomi" },
     { href: "#contacto", label: "Contacto" },
   ];

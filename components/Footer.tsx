@@ -113,7 +113,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link
-                  href="/"
+                  href="#inicio"
                   className="hover:text-primary transition-colors"
                 >
                   Inicio
@@ -121,18 +121,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#servicios"
+                  href="#sobre-nosotros"
                   className="hover:text-primary transition-colors"
                 >
-                  Servicios
+                  Sobre Nosotros
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#dra-martinez"
+                  href="#dra-nomi"
                   className="hover:text-primary transition-colors"
                 >
-                  La Dra. Martínez
+                  La Dra. Nomi
                 </Link>
               </li>
               <li>
