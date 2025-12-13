@@ -127,19 +127,19 @@ export default function AboutUs() {
                                         <Image
                                             src={item.backgroundImageSrc || "/assets/relog_SF.png"}
                                             alt={item.title}
-                                            width={256}
-                                            height={256}
-                                            className="w-64 h-64 object-contain"
+                                            width={160}
+                                            height={160}
+                                            className="w-40 h-40 object-contain"
                                         />
                                     </div>
                                 )}
-                                <h4 className="text-xl font-bold text-gray-900 mb-6 relative z-10">{item.title}</h4>
+                                <h4 className="text-xl font-extrabold text-gray-950 mb-6 relative z-10">{item.title}</h4>
                                 {item.icon && (
                                     <div className="flex items-center justify-center text-primary mb-6 transition-colors duration-300 relative z-10">
                                         {item.icon}
                                     </div>
                                 )}
-                                <p className="text-gray-600 leading-relaxed relative z-10">{item.desc}</p>
+                                <p className="text-gray-700 font-medium leading-relaxed relative z-10">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
