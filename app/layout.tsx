@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Chatbot from "@/components/Chatbot";
 
 export const metadata: Metadata = {
   title: "Laboratorio de Citología Ginecológica - Dra. Martínez",
@@ -39,7 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="bg-gradient-to-br from-pink-50 to-pink-100 min-h-screen">{children}</body>
+      <body className="bg-gradient-to-br from-pink-50 to-pink-100 min-h-screen">
+        {children}
+        <Chatbot />
+      </body>
     </html>
   );
 }
