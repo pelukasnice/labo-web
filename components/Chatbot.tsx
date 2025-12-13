@@ -136,7 +136,7 @@ export default function Chatbot() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed bottom-24 right-6 z-50 w-[360px] h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-pink-100"
+                        className="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[500px] md:w-[600px] h-[600px] max-h-[80vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-pink-100"
                     >
                         {/* Header */}
                         <div className="bg-gradient-to-r from-pink-500 to-pink-600 px-4 py-3 flex items-center gap-3">
@@ -180,7 +180,7 @@ export default function Chatbot() {
                                         }`}
                                 >
                                     <div
-                                        className={`max-w-[80%] px-4 py-2 rounded-2xl ${message.role === "user"
+                                        className={`max-w-[95%] px-4 py-2 rounded-2xl ${message.role === "user"
                                             ? "bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-br-md"
                                             : "bg-white text-gray-700 shadow-sm border border-pink-100 rounded-bl-md"
                                             }`}
