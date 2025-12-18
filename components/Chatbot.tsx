@@ -1,5 +1,5 @@
 "use client";
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown"; 
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -190,9 +190,10 @@ export default function Chatbot() {
                                             ${message.role === "user" ? "prose-invert" : "prose-pink"}
                                             prose-p:my-1 prose-ul:my-1 prose-li:my-0.5 prose-headings:my-2 prose-headings:font-semibold`}
                                         >
-                                            <ReactMarkdown>
+                                            {/* <ReactMarkdown>
                                                 {message.content}
-                                            </ReactMarkdown>
+                                            </ReactMarkdown> */}
+                                            <p className="whitespace-pre-wrap">{message.content}</p>
                                         </div>
                                     </div>
                                 </motion.div>

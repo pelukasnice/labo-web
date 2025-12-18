@@ -35,6 +35,14 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
+            <Image
+              src="/assets/copia2.png"
+              alt="Logo Laboratorio"
+              width={200}
+              height={200}
+              className="mb-8 w-[300px] h-auto"
+              priority
+            />
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Laboratorio de{" "}
               <span className="bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent">
